@@ -871,7 +871,7 @@ northd_update_probe_interval_cb(
 static void
 set_probe_interval(struct jsonrpc_session *session, int override_interval)
 {
-#define DEFAULT_PROBE_INTERVAL_MSEC 5000
+#define DEFAULT_PROBE_INTERVAL_MSEC 0
     const char *name = jsonrpc_session_get_name(session);
     int default_interval = (!stream_or_pstream_needs_probes(name)
                             ? 0 : DEFAULT_PROBE_INTERVAL_MSEC);
